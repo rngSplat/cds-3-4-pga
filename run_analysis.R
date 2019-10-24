@@ -31,7 +31,7 @@ for (set in sets) {
            read.delim(files[["subject"]][set],
                       header = FALSE,
                       col.names = "subjectID"))
-    ##Load test activity IDs
+    ##Load activity IDs
     assign(paste0(set,"ActivityIDs"),
            read.delim(files[["y"]][set],
                       header = FALSE, 
