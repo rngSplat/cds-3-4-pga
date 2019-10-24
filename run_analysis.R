@@ -65,5 +65,5 @@ tidyDF <- as_tibble(tidyDF)
 by_subject_and_activity <- tidyDF %>% group_by(subjectid, activity) %>% dplyr::summarise_each(funs(mean))
 rm(activityLabels,files,features,testDF,trainDF,testActivity,trainActivity,testActivityIDs,trainActivityIDs,testResults,trainResults,testSubjects,trainSubjects,set,sets)
 
-write.table(tidyDF, "tidyDF.txt", sep="\t")
-write.table(by_subject_and_activity, "by_subject_and_activity.txt", sep="\t")
+write.table(tidyDF, "tidyDF.txt", sep="\t", row.name=FALSE)
+write.table(by_subject_and_activity, "by_subject_and_activity.txt", sep="\t", row.name=FALSE)
